@@ -1,0 +1,86 @@
+
+<div id="container">
+  <form
+    class="form"
+    [formGroup]="this.formulario"
+    (ngSubmit)="onRegister()"
+  >
+    <!--************************* Logo y titulo *************************-->
+    <div class="text-center">
+      <img class="mb-4" src="../../../assets/logo-Sala-De-Juegos.png" alt="" />
+      <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+    </div>
+    <!--************************* Nombre *************************-->
+    <div class="form-label-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nombre"
+        formControlName="name"
+      />
+      <!-- <div *ngIf="name.errors && (name.dirty || name.touched)" class="error">
+        Nombre invalido.
+      </div> -->
+    </div>
+    <!--************************* Correo *************************-->
+    <div class="form-label-group">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Correo"
+        formControlName="email"
+      />
+      <!-- <div *ngIf="email.errors && (email.dirty || email.touched)" class="error">
+        Correo Invalido
+      </div> -->
+    </div>
+    <!--************************* Contraseña *************************-->
+    <div class="form-label-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Contraseña"
+        formControlName="password"
+      />
+      <!-- <div
+        *ngIf="password.errors && (password.dirty || password.touched)"
+        class="error"
+      >
+        Contraseña invalida.
+      </div> -->
+    </div>
+    <!--************************* Confirmar Contraseña *************************-->
+    <div class="form-label-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Confirmar Contraseña"
+        formControlName="confPassword"
+      />
+      <!-- <div
+        *ngIf="
+          (confPassword.dirty || confPassword.touched)
+        "
+        class="error"
+      >
+        La Contraseñas no coisiden.
+      </div> -->
+    </div>
+    <!--************************* Boton *************************-->
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      [disabled]="this.formulario.invalid"
+    >
+      Registrarte
+    </button>
+    <!--************************* Link login *************************-->
+    <div class="text-center">
+      <a class="text-black text-decoration-none" routerLink="/login"
+        >Iniciar sesión</a
+      >
+    </div>
+    <p class="text-black text-center">&copy; 2017-2022</p>
+  </form>
+</div>
+

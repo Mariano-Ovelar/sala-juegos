@@ -1,0 +1,25 @@
+<!-- quien soy -->
+<div class="container text-blak" id="contenido">
+  <div class="row">
+    <div class="text-center">
+      <img
+        class="bd-placeholder-img rounded-circle"
+        width="140"
+        height="140"
+        src={{this.foto}}
+        role="img"
+        aria-label="Placeholder: 140x140"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      />
+      <h2>{{ this.nombre }}</h2>
+    </div>
+    <div>
+      <p>E-mail: {{ this.email }}</p>
+      <p>cell: {{ this.tel }}</p>
+      <p>Legajo: {{ this.legajo }}</p>
+      <p class="text-center">{{ this.nombreJuego }}</p>
+      <p>{{ this.descpcionJuego }}</p>
+    </div>
+  </div>
+</div>

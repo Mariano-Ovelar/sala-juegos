@@ -1,0 +1,66 @@
+<div id="container">
+  <form
+    class="form"
+    [formGroup]="this.formulario"
+    (ngSubmit)="onLogin()"
+  >
+    <!--************************* Logo y titulo *************************-->
+    <div class="text-center">
+      <img class="mb-4" src="../../../assets/logo-Sala-De-Juegos.png" alt="" />
+      <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+    </div>
+    <!--************************* Correo *************************-->
+    <div class="form-label-group">
+      <input
+        type="email"
+        id="inputEmail"
+        class="form-control"
+        placeholder="Correo"
+        formControlName="email"
+      />
+    </div>
+    <!--************************* Contraseña *************************-->
+    <div class="form-label-group">
+      <input
+        type="password"
+        id="inputPassword"
+        class="form-control"
+        placeholder="Contraseña"
+        formControlName="password"
+      />
+    </div>
+    <!--************************* Boton *************************-->
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      [disabled]="this.formulario.invalid"
+    >
+      Entrar
+    </button>
+    <!--************************* Link Register *************************-->
+    <div class="text-center">
+      <a class="text-black text-decoration-none" routerLink="/register"
+        >Registrarme</a
+      >
+    </div>
+    <p class="text-black text-center">&copy; 2017-2022</p>
+  </form>
+</div>
+
+<!--************************* Boton Users *************************-->
+<div class="container text-center">
+  <div>
+    <button class="w-25 btn btn-lg btn-light" (click)="this.completarUser1()">
+      Usuario 1
+    </button>
+  </div>
+  <div>
+    <button class="w-25 btn btn-lg btn-light" (click)="this.completarUser2()">
+      Usuario 2
+    </button>
+  </div>
+  <div>
+    <button class="w-25 btn btn-lg btn-light" (click)="this.completarUser3()">
+      Usuario 3
+    </button>
+  </div>
+</div>
